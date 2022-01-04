@@ -1,7 +1,11 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live site Link [Easy Dev](https://easydev-85945.web.app/).
 
-## Available Scripts
-
-In the project directory, you can run:
+## Bullet Points
+This project i have used below technologies. 
+1. Complete React Website
+2. MongoDB Database
+3. Node and Express JS
+4. Firebse Authentication
+5. Redux
