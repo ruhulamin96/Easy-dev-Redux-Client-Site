@@ -1,0 +1,18 @@
+.header_style{
+    position: relative;
+    text-align: center;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+  }
+.text{
+    color: var(--primary-color);
+    opacity: 1!important;
+}
+:root{
+    --primary-color: #343434;
+}

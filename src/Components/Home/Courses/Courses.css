@@ -1,0 +1,27 @@
+.courses{
+   
+display: flex;
+   flex-direction: row;
+}
+.left_side{
+ width: 40%;
+}
+ li{
+    list-style: none;
+    margin: 0.5rem;
+}
+ li a{
+    text-decoration: none;
+   font-size: 1.5rem;
+   color: black;
+   transition: transform;
+   
+}
+ li a:hover{
+    color: green;
+    font-weight: bold;
+  
+}
+.right_side{
+
+}
