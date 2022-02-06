@@ -14,6 +14,7 @@ import AllCourse from "./Components/Home/Courses/AllCourse/AllCourse";
 import Login from "./Components/Login/Login";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import NavBar from "./Components/Shared/NavBar/NavBar";
+import Footer from "./Components/Shared/Footer/Footer";
 function App() {
   return (
     <div className="">
@@ -54,6 +55,7 @@ function App() {
         </Route>
         <Route path="login" element={<Login></Login>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

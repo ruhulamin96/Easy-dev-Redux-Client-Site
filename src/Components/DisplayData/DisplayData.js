@@ -10,12 +10,12 @@ function DisplayData(props) {
       <div class="card border-0 h-100 img-hover-zoom">
         <img src={img} class="card-img-top" alt="..." />
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">{title}</h5>
+          <h5 class="card-title fw-bold">{title}</h5>
           <p class="card-text">{desc.slice(0, 100)}</p>
           <div style={{ marginTop: "auto" }}>
-            <h3>Price: ${price} </h3>
+            <h3 className="fw-bold">Price: ${price} </h3>
             <Link to={`/enroll/${_id}`}>
-              <button>Enroll Now</button>
+              <button className="button-enroll"> Enroll Now</button>
             </Link>
           </div>
         </div>

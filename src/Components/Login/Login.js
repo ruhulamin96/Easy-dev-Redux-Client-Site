@@ -2,7 +2,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { setActiveUser } from "../../Redux/authSlice";
 import "./Login.css";
 
@@ -10,10 +10,12 @@ function Login() {
   const Dispatch = useDispatch();
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
+  let location=useLocation()
   //state থেকে ডাটা নিতে হবে এভাবে
   const userName = useSelector((state) => state.auth.userName);
   const userEmail = useSelector((state) => state.auth.userEmail);
   const navigate = useNavigate();
+  
   const handleLogIn = (e) => {
     e.preventDefault();
     signInWithPopup(auth, provider).then((result) => {
@@ -24,7 +26,8 @@ function Login() {
           userEmail: result.user.email,
         })
       );
-      navigate(-1);
+      //navigate(-1)
+     navigate(location.state?.from ||'/')
     });
   };
   return (

@@ -9,7 +9,7 @@
   width: 100%;
   height: 100%;
 }
-button {
+.button-enroll {
   /* margin: 2rem 0; */
   font-size: 1.2rem;
   background-color: white;
@@ -23,7 +23,7 @@ button {
   background-size: 200%;
   transition: 0.5s ease-out;
 }
-button:hover {
+.button-enroll:hover {
   background-position: left;
   color: white;
 }

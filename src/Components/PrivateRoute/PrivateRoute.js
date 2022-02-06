@@ -3,12 +3,13 @@ import React from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { setActiveUser, updateProfileInfo } from "../../Redux/authSlice";
 
 function PrivateRoute({ children }) {
   const isAuthenticate = useSelector((state) => state.auth.isAuthenticated);
   let isLoad = useSelector((state) => state.auth.isLoad);
+  let location = useLocation();
   // if(isAuthenticate===false){
   //   isLoad=false;
   // }
@@ -44,7 +45,7 @@ function PrivateRoute({ children }) {
       </div>
     );
   }
-  return isAuthenticate ? children : <Navigate to="/login" />;
+  return isAuthenticate ? children : <Navigate to="/login" state={{ from: location }} />;
 }
 
 export default PrivateRoute;
