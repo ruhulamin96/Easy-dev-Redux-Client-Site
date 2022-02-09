@@ -8,6 +8,7 @@ import { updateProfileInfo } from "../../Redux/authSlice";
 import { useEffect } from "react";
 import Services from "./Services/Services";
 import Teachers from "./Teachers/Teachers";
+import Review from "./Review/Review";
 
 
 function Home() {
@@ -24,7 +25,7 @@ function Home() {
       <Services></Services>
       <Courses></Courses>
       <Teachers></Teachers>
-     
+     <Review></Review>
     </div>
   );
 }
