@@ -20,12 +20,12 @@ function Home() {
 
   return (
     <div>
-      <NavBar></NavBar>
+     
       <Header></Header>
       <Services></Services>
       <Courses></Courses>
       <Teachers></Teachers>
-     <Review></Review>
+     {/* <Review></Review> */}
     </div>
   );
 }

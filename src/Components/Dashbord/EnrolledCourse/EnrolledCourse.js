@@ -2,7 +2,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-
+import './EnrolledCourse.css'
 import {
   deleteCourse,
   deleteEnrollment,
@@ -33,7 +33,7 @@ function EnrolledCourse() {
               <td>{data.title}</td>
               <td style={{padding:"0 1rem"}}>${data.price}</td>
               <td >
-                <button
+                <button className="cancell-button"
                   onClick={() => cancelEnrollment(data._id)}
                   
                 >

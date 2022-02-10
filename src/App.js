@@ -15,9 +15,11 @@ import Login from "./Components/Login/Login";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import NavBar from "./Components/Shared/NavBar/NavBar";
 import Footer from "./Components/Shared/Footer/Footer";
+import About from "./Components/About/About";
 function App() {
   return (
     <div className="">
+      <NavBar></NavBar>
       <Routes>
         <Route path="/" element={<Home></Home>}>
           <Route index element={<AllCourse></AllCourse>}></Route>
@@ -27,6 +29,7 @@ function App() {
           <Route path="webdev" element={<WebDev></WebDev>}></Route>
           <Route path="javascript" element={<Javascript></Javascript>}></Route>
         </Route>
+        <Route path="about" element={<About></About>}></Route>
         <Route
           path="enroll/:id"
           element={

@@ -19,15 +19,16 @@ function Enroll() {
       {/* <NavBar></NavBar> */}
     <div className="container enroll_container">
       <div className="row enroll_style ">
+        <h3 className="text-center fw-bold" style={{letterSpacing:"5px"}}>COURSE DETAILS</h3>
         <div className="col-md-6">
-          <h3>{enrollData[0]?.title}</h3>
+          <h3 className="fw-bold">{enrollData[0]?.title}</h3>
           <h5>{enrollData[0]?.desc}</h5>
         </div>
         <div className="col-md-4 text-center ">
           <img src={enrollData[0]?.img} alt="" />
           <div className="mt-5">
             <h3 className="fw-bold">Price: ${enrollData[0]?.price}</h3>
-            <button
+            <button className="button-enroll"
               onClick={() => {
                 Dispatch(
                   enrolledCourse({

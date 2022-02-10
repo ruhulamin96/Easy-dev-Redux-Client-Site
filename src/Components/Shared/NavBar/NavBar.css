@@ -1,0 +1,26 @@
+.nav_design li {
+    margin: 0 10px;
+}
+.nav_design li a {
+    display: block;
+    color: white;
+    border-radius: 5px;
+    padding:5px 20px;
+    /* padding: 5px; */
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: #02B3E4;
+    text-decoration: none;
+    transition: .3s;
+    /* text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    transition: transform;
+    padding: 10px; */
+    color: white!important;
+  }
+  .nav_design li a:hover{
+    color: white ;
+    border-radius: 10px;
+    background-color: #192F59;
+  }

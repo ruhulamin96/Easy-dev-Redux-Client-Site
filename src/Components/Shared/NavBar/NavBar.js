@@ -4,8 +4,10 @@ import { useDispatch } from "react-redux";
 import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 import { Link } from "react-router-dom";
 import { setActiveUser, setUserLogOutState } from "../../../Redux/authSlice";
+import logo from '../../../images/logo.png'
 import initializeFirebase from "../../../Firebase/firebase.init";
 import { useEffect } from "react";
+import './NavBar.css'
 initializeFirebase();
 function NavBar() {
   const Dispatch = useDispatch();
@@ -49,7 +51,8 @@ function NavBar() {
       <nav class="navbar navbar-expand-lg mt-0 navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand fs-3" href="#">
-            Easy Dev
+           <img src={logo} className="w-25" alt="" />
+           
           </a>
           <button
             class="navbar-toggler"
@@ -63,14 +66,14 @@ function NavBar() {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav_design">
               <li class="nav-item">
                 <Link class="nav-link active" aria-current="page" to="/">
                   Home
                 </Link>
               </li>
               <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/">
+                <Link class="nav-link active" aria-current="page" to="/about">
                   About Us
                 </Link>
               </li>
